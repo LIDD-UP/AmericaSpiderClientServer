@@ -43,3 +43,5 @@ while True:
     req = requests.post(url='http://138.197.143.39:5000/process_detail_page_json/', json=json.dumps('{"aa":"11"}'))
     # print(req.text)
     print(time.time()-time_now)
+
+
