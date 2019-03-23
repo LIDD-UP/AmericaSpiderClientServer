@@ -34,5 +34,12 @@ from AmericaSpiderClientServer.settings import detial_spider_main_path
 #
 # os.system(r"python {}".format(detial_spider_main_path))
 
+#
+# requests.get(url='http://127.0.0.1:5000/process_before_start_list_spider/')
 
-requests.get(url='http://127.0.0.1:5000/process_before_start_list_spider/')
+import time
+while True:
+    time_now = time.time()
+    req = requests.post(url='http://138.197.143.39:5000/process_detail_page_json/', json=json.dumps('{"aa":"11"}'))
+    # print(req.text)
+    print(time.time()-time_now)
