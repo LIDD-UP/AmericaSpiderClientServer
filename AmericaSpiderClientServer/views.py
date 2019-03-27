@@ -61,7 +61,7 @@ def test():
 @app.route('/get_detail_search_criteria/',methods={"POST","GET"})
 def get_detail_search_criteria():
     json_data = request.get_json()
-    print(json_data)
+    print("detail 爬虫接受数据成功")
     dict_data = json.loads(json_data)
     property_id_list = dict_data['data']
     property_id_list = ['https://mapi-ng.rdc.moveaws.com/api/v1/properties/{}?client_id=rdc_mobile_native%2C9.3.7%2Candroid'.format(property_id) for property_id in property_id_list]
@@ -70,6 +70,9 @@ def get_detail_search_criteria():
 
     property_id_df.to_csv(detail_search_criteria_save_path + '/realtor_app_detail_page_search_criteria.csv', index=False)
 
+    print('detail 爬虫数据存储到本地csv文件完成，准备开启detail爬虫')
     return redirect('/start_detail_spider/')
+
+
 
 
