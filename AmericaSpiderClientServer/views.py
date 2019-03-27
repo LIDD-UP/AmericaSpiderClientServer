@@ -74,5 +74,14 @@ def get_detail_search_criteria():
     return redirect('/start_detail_spider/')
 
 
+@app.route('/test_compress_data_post/',methods={"POST","GET"})
+def test_compress_data_post():
+    # data = request.get_json()
+    data = request.get_data()
+    print(len(data))
+    return 'yes'
+
+
+
 
 
