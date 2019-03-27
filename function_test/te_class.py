@@ -38,17 +38,21 @@ class GetListSearchCriteria(object):
 
 
 if __name__ == '__main__':
-    # while True:
-    #     # time.sleep(5)
-    xx = GetListSearchCriteria()
-    xx.te_class()
-    # xx.get_list_url()
-
-    print(xx.offset)
-    print(GetListSearchCriteria.offset)
-
-    yy = GetListSearchCriteria()
-    # yy.get_list_url()
-    yy.te_class()
-    print(xx.offset)
-    print(GetListSearchCriteria.offset)
+    # # while True:
+    # #     # time.sleep(5)
+    # xx = GetListSearchCriteria()
+    # xx.te_class()
+    # # xx.get_list_url()
+    #
+    # print(xx.offset)
+    # print(GetListSearchCriteria.offset)
+    #
+    # yy = GetListSearchCriteria()
+    # # yy.get_list_url()
+    # yy.te_class()
+    # print(xx.offset)
+    # print(GetListSearchCriteria.offset)
+    while True:
+        GetListSearchCriteria.offset +=1
+        print(GetListSearchCriteria.offset)
+        time.sleep(5)

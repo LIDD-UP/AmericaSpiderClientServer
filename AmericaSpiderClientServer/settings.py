@@ -17,6 +17,9 @@ detial_spider_main_path = spider_root_path + r'/realtor_a_main.py'
 list_spider_main_path = spider_root_path + r'/realtor_list_page_main.py'
 
 
+detail_search_criteria_save_path = spider_root_path + '/crawl_tools'
+
+
 
 
 
