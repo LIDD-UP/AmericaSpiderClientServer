@@ -1,6 +1,6 @@
 #!/bin/bash
 
-project1='zillow_main.py'
+project1='runserver.py'
 
 
 for Pro in $project1
@@ -14,7 +14,7 @@ if [ $PythonPid -eq 0 ];
         then
         echo "`date "+%Y-%m-%d %H:%M:%S"`:$Pro is not running" >> /usr/project/logs/python.log
 
-        cd /usr/project/EstateZillowSpider/AmericanRealEstate/
+        cd /data/project/AmericaSpiderClientServer/
         
         nohup python3 $Pro > nohup.out 2>&1 &
 

@@ -20,8 +20,8 @@ def start_list_spider():
     print("执行list爬虫")
     sys.path.append(spider_root_path)
     os.chdir(spider_root_path)
-    # os.system(r"python3 {}".format(list_spider_main_path))
-    os.system(r"python {}".format(list_spider_main_path))
+    os.system(r"python3 {}".format(list_spider_main_path))
+    # os.system(r"python {}".format(list_spider_main_path))
     return "execute successfully"
 
 
@@ -29,15 +29,14 @@ def start_list_spider():
 @app.route('/start_detail_spider/',methods={"POST","GET"})
 def start_detail_spider():
     data = request.get_data()
-    print(data)
     print("执行详情页爬虫")
     import os
     import sys
     detial_path = detial_spider_main_path
     sys.path.append(spider_root_path)
     os.chdir(spider_root_path)
-    # os.system(r"python3 {}".format(detial_path))
-    os.system(r"python {}".format(detial_path))
+    os.system(r"python3 {}".format(detial_path))
+    # os.system(r"python {}".format(detial_path))
     return "execute successfully"
 
 
@@ -63,7 +62,7 @@ def test():
 @app.route('/get_detail_search_criteria/',methods={"POST","GET"})
 def get_detail_search_criteria():
     json_data = request.get_json()
-    print("detail 爬虫接受数据成功")
+    print("detail 爬虫接受爬取条件数据成功")
     dict_data = json.loads(json_data)
     property_id_list = dict_data['data']
     property_id_list = ['https://mapi-ng.rdc.moveaws.com/api/v1/properties/{}?client_id=rdc_mobile_native%2C9.3.7%2Candroid'.format(property_id) for property_id in property_id_list]
