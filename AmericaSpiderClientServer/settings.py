@@ -8,11 +8,12 @@ import pandas as pd
 
 # local configure
 # spider_root_path = r'F:\PycharmProject\AmericanRealEstate'
+spider_root_path = r'G:\PycharmProject\AmericanRealEstate'
 # detial_spider_main_path = spider_root_path + r'\realtor_a_main.py'
 # list_spider_main_path = spider_root_path + r'\realtor_list_page_main.py'
 
 # server configure
-spider_root_path = r'/data/project/AmericanRealEstate'
+# spider_root_path = r'/data/project/AmericanRealEstate'
 detial_spider_main_path = spider_root_path + r'/realtor_a_main.py'
 list_spider_main_path = spider_root_path + r'/realtor_list_page_main.py'
 
