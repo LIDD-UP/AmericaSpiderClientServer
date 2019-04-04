@@ -95,7 +95,7 @@ def close_spider_client_server():
 def close_client_server():
     detail_spider_close_thread1 = threading.Thread(target=close_spider_client_server)
     detail_spider_close_thread1.start()
-    return
+    return '正在关闭爬虫客户端'
 
 
 
