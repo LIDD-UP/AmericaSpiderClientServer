@@ -84,10 +84,18 @@ def test_compress_data_post():
     return 'yes'
 
 
-@app.route('/close_client_server/',methods={"POST","GET"})
-def close_client_server():
+def close_spider_client_server():
+    time_remaind = 120
+    print('还有{}s 关闭服务器'.format(time_remaind))
+    time.sleep(time_remaind)
     os.system('/bin/sh {}'.format(close_client_server_shell_path))
-    return 'yes'
+
+
+@app.route('/close_client_server/', methods={"POST","GET"})
+def close_client_server():
+    detail_spider_close_thread1 = threading.Thread(target=close_spider_client_server)
+    detail_spider_close_thread1.start()
+    return
 
 
 
