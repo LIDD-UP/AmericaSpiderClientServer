@@ -10,6 +10,7 @@ import pandas as pd
 
 from AmericaSpiderClientServer.settings import detial_spider_main_path, spider_root_path,list_spider_main_path
 from AmericaSpiderClientServer.settings import detail_search_criteria_save_path
+from AmericaSpiderClientServer.settings import close_client_server_shell_path
 
 
 # 开启列表页爬虫
@@ -20,8 +21,8 @@ def start_list_spider():
     print("执行list爬虫")
     sys.path.append(spider_root_path)
     os.chdir(spider_root_path)
-    os.system(r"python3 {}".format(list_spider_main_path))
-    # os.system(r"python {}".format(list_spider_main_path))
+    # os.system(r"python3 {}".format(list_spider_main_path))
+    os.system(r"python {}".format(list_spider_main_path))
     return "execute successfully"
 
 
@@ -35,8 +36,8 @@ def start_detail_spider():
     detial_path = detial_spider_main_path
     sys.path.append(spider_root_path)
     os.chdir(spider_root_path)
-    os.system(r"python3 {}".format(detial_path))
-    # os.system(r"python {}".format(detial_path))
+    # os.system(r"python3 {}".format(detial_path))
+    os.system(r"python {}".format(detial_path))
     return "execute successfully"
 
 
@@ -81,6 +82,13 @@ def test_compress_data_post():
     data = request.get_data()
     print(len(data))
     return 'yes'
+
+
+@app.route('/close_client_server/',methods={"POST","GET"})
+def close_client_server():
+    os.system('/bin/sh {}'.format(close_client_server_shell_path))
+    return 'yes'
+
 
 
 

@@ -20,6 +20,9 @@ list_spider_main_path = spider_root_path + r'/realtor_list_page_main.py'
 
 detail_search_criteria_save_path = spider_root_path + '/crawl_tools'
 
+spider_client_server_root_path = '/data/project/AmericaSpiderClientServer'
+close_client_server_shell_path = spider_client_server_root_path + '/close_realtor_client_server.sh'
+
 
 
 
